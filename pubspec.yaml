@@ -1,0 +1,60 @@
+name: whitelabel_app
+description: "Example Whitelabel App for the Flutter in Production course"
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flex_color_scheme: 7.3.1
+  package_info_plus: 8.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: 4.0.0
+  flutter_flavorizr: 2.2.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    # How to bundle assets based on flavor
+    # https://github.com/bizz84/flutter-tips-and-tricks/blob/main/tips/0147-bundle-assets-based-on-flavor/index.md
+    - path: assets/blue/
+      flavors:
+        - blue
+    # TODO: add all the remaining paths for each flavor
+    - path: assets/cyan/
+      flavors:
+        - cyan
+
+# TODO: Add flutter_flavorizr config for each flavor
+flavorizr:
+  ide: "vscode"
+  app:
+    android:
+      flavorDimensions: "flavor-type"
+    
+  flavors:
+    blue:
+      app:
+        name: "Blue xyz"
+      android:
+        applicationId: "com.codewithandrea.whitelabel_app.blue"
+        icon: "assets/blue/icon.png"
+      ios:
+        bundleId: "com.codewithandrea.whitelabelApp.blue"
+        icon: "assets/blue/icon.png"
+
+    cyan:
+      app:
+        name: "Cyan xyz"
+      android:
+        applicationId: "com.codewithandrea.whitelabel_app.cyan"
+        icon: "assets/cyan/icon.png"
+      ios:
+        bundleId: "com.codewithandrea.whitelabelApp.cyan"
+        icon: "assets/cyan/icon.png"

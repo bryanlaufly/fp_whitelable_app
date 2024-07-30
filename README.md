@@ -1,6 +1,6 @@
-# Example Whitelabel App for the Flutter in Production course
+# Example whitelabel or add flavor to your flutter app
 
-This example app is used as one of the challenges for the Flutter in Production course.
+This example app is used to whitelabel or add flavor for your flutter app
 
-Follow the instructions in the course to complete this challenge.
+
 # fp_whitelable_app
